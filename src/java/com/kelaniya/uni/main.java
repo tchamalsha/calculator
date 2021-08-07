@@ -1,7 +1,9 @@
 package com.kelaniya.uni;
 
+import javax.xml.crypto.Data;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -14,26 +16,11 @@ public class main {
         sub sub = new sub();
         Scanner scanner=new Scanner(System.in);
 
-        String[] num1;
-        String num2;
-        float number1 = 10;
-        float number2=13;
-        String data = null;
+        String[] nums = readText();
+        float number1 = Float.parseFloat(nums[0]);
+        float number2 = Float.parseFloat(nums[1]);
 
-        try {
-            File myObj = new File("src/java/com/kelaniya/uni/numbers");
-            Scanner myReader = new Scanner(myObj);
-            this.data=scanner.nextLine();
-            
-            myReader.close();
 
-        } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-
-        num1=data.split(" ",0);
-        System.out.println(Arrays.toString(num1));
         System.out.println("Enter the mathematical operation(sum,mul,sub): ");
         String operation=scanner.next();
         if (operation.equals("sub")){
@@ -46,5 +33,23 @@ public class main {
             System.out.println(mul.multiplication(number1,number2));
         }
 
+    }
+    static String[] readText() {
+        String[] nums = {};
+        try {
+            File myObj = new File("src/java/com/kelaniya/uni/numbers");
+            Scanner myReader = new Scanner(myObj);
+            String data=myReader.nextLine();
+           nums=data.split(" ",0);
+
+            myReader.close();
+
+
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+
+        }
+        return  nums;
     }
 }
