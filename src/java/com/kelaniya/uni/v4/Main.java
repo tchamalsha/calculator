@@ -12,14 +12,10 @@ public class Main {
 
         fileReader fileReader = new fileReader();
         Double[] numbers = fileReader.getNumbers();
-        Double number1 =numbers[0];
-        Double number2 =numbers[1];
 
 
         OperationFactory operationFactory = new OperationFactory();
         operation operation = operationFactory.getInstance(operator);
-
-
 
         Double result = operation.execute(numbers);
 
