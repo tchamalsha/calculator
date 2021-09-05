@@ -1,4 +1,4 @@
-package v2;
+package com.kelaniya.uni.v2;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -37,5 +37,6 @@ public class Main {
 
         //or we can use switch case statement
         System.out.println("The result is " + result);
+
     }
 }

@@ -1,11 +1,7 @@
-package com.kelaniya.uni;
+package com.kelaniya.uni.v1;
 
-import javax.xml.crypto.Data;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.sql.SQLOutput;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class main {
