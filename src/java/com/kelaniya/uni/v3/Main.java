@@ -15,12 +15,14 @@ public class Main {
         Double[] numbers = fileReader.getNumbers();
         Double number1 =numbers[0];
         Double number2 =numbers[1];
+
+
         double result = 0;
-        if (operation.equals("add")) {
+        if (operator.equals("add")) {
             result = number1 + number2;
-        } else if (operation.equals("sub")) {
+        } else if (operator.equals("sub")) {
             result = number1 - number2;
-        } else if (operation.equals("mul")) {
+        } else if (operator.equals("mul")) {
             result = number1 * number2;
         }
 
