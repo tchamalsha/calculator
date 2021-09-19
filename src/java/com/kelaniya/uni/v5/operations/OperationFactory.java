@@ -6,13 +6,13 @@ public class OperationFactory {
 
         operation operation=null;
         if (operator.equals("add")) {
-            operation = new addOperation();
+            operation = new AddOperation();
         } else if (operator.equals("sub")) {
-            operation= new subOperation();
+            operation= new SubOperation();
         } else if (operator.equals("mul")) {
-            operation = new mulOperation();
+            operation = new MulOperation();
         }else if (operator.equals("div")) {
-            operation = new divOperation();
+            operation = new DivOperation();
         }//violation of OCP
         return operation;
     }
