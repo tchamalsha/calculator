@@ -1,6 +1,6 @@
 package com.kelaniya.uni.v5.operations;
 
-public class DivOperation implements operation {
+public class DivOperation implements Operation {
 
     public Double execute(Double[] numbers) throws InvalidOperationEception {
         if(numbers[0]==0){

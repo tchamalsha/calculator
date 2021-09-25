@@ -2,9 +2,9 @@ package com.kelaniya.uni.v5.operations;
 
 public class OperationFactory {
 
-    public operation getInstance(String operator){
+    public Operation getInstance(String operator){
 
-        operation operation=null;
+        Operation operation=null;
         if (operator.equals("add")) {
             operation = new AddOperation();
         } else if (operator.equals("sub")) {
